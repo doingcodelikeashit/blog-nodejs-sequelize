@@ -13,20 +13,11 @@ const userModel = sequelize.define(
     },
     userPassword: {
       type: DataTypes.STRING,
-      validate: {
-        len: {
-          args: [7, 42],
-          msg: "The password length should be between 7 and 42 characters.",
-        },
-      },
     },
     userMobile: {
       type: DataTypes.STRING,
       unique: true,
       allowNull: false,
-      validate: {
-        isNumeric: true,
-      },
     },
     email: {
       type: DataTypes.STRING,
